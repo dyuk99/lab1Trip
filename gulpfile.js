@@ -69,6 +69,9 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('build'));
 
+    var buildHtml = gulp.src('app/cities/*.html') // Переносим HTML в продакшен
+    .pipe(gulp.dest('build/cities'));
+
 });
 
 gulp.task('default', ['watch']);
