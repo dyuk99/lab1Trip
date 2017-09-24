@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+@import "button";
+body {
+	background-size: cover;
+	background-image: url(../img/kyiv1.jpg);
+	background-attachment: fixed;
+}
+.container-fluid {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100vh;
+	box-sizing:border-box;
+	padding: 0 100px;
+	.col-md-12 {
+		text-align: center;
+		padding: 0 100px;
+		.col-md-4 {
+			padding: 0;
+			background-color: #fff;
+			background-image: url(../img/harkiv.jpg);
+			background-size: cover;
+			min-height: 400px;
+			&.rivne {
+				background-image: url(../img/rivne.jpg);
+			}
+			&.donetsk {
+				background-image: url(../img/donetsk.jpg);
+			}
+		}
+		.col-md-8 {
+			background-color: #fff;
+			text-align: center;
+			position: relative;
+			padding-top: 25px;
+			h1 {
+				font-family: 'Merriweather', serif;
+				font-weight: 700;
+				animation-delay: .25s;
+			}
+			hr {
+				background-color:black;
+				width:100px;
+				animation-delay: .5s;
+			}
+			p {
+				font-family: 'Merriweather', serif;
+				font-weight: 300;
+				animation-delay: .75s;
+			}
+			a {
+				animation-delay: 1.25s;
+			}
+			.info-page {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.container-fluid {
+		padding: 0;
+		.col-md-12 {
+			padding: 0;
+			.info-page {
+
+				margin: 100px 0;
+				a {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+				}
+			}
+		} 
+	}
+}
+@media screen and (max-width: 789px) {
+	.container-fluid {
+		display: block;
+	}
+}

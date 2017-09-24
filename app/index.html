@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+ <div id="fullpage">
+  <div class="section section-one">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 map-div">
+         <div class="map"><img src="img/map.png" class="img-fluid"></div>
+         <img src="img/mark.png" class="mark">
+       </div>
+       <div class="col-md-6 col-sm-12 right">
+        <h1 class="heading">Trip Helper</h1>
+        <h3>Travel with confidence, plan your trip ahead, look for appartments and more.</h3>
+        <ul>
+          <li>
+            <img src="img/camera.png">
+            <p>Discover sights</p>
+          </li>
+          <li>
+            <img src="img/bed.png">
+            <p>Have nice sleep</p>
+          </li>
+          <li>
+            <img src="img/restaurant.png">
+            <p>Eat delicious food</p>
+          </li>
+        </ul>
+        <nav class="cl-effect-10">
+          <a href="#" data-hover="Continue"><span>Continue</span></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="mouseScroll">
+    <div class="mouse">
+      <span class="pointInMouse"></span>
+    </div>
+    <h6>Scroll down</h6>
+  </div>
+</div>
+<div class="section section-two">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="row">
+          <div class="col-md-8 col-sm-12 leftText">
+            <h1>What is it?</h1>
+            <hr>
+            <p>
+              Choose your place to go, learn about places you can visit near you point, prices in hotels, where to eat etc.
+            </p>
+            <nav class="cl-effect-10 black">
+              <a href="#" data-hover="Continue"><span>Continue</span></a>
+            </nav>
+          </div>
+          <div class="col-md-4 col-sm-12 rightImg">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mouseScroll">
+    <div class="mouse">
+      <span class="pointInMouse"></span>
+    </div>
+    <h6>Scroll down</h6>
+  </div>
+</div>
+<div class="section section-third">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1>Cities</h1>
+      <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <a href="cities/harkiv.html" class="img img-h3">
+              <h3>Kharkiv</h3>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="cities/rivne.html" class="img img-h3">
+              <h3>Rivne</h3>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="cities/donetsk.html" class="img img-h3">
+              <h3>Donetsk</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mouseScroll">
+    <div class="mouse">
+      <span class="pointInMouse"></span>
+    </div>
+    <h6>Scroll down</h6>
+  </div>
+</div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="js/libs.min.js"></script>
+<script type="text/javascript">
+  'use strict'
+  $(document).ready(function() {
+    let scrollOverflow = true;
+    if ($(window).width()<768 ) {
+      scrollOverflow = false;
+    }
+    else {
+      scrollOverflow = true;
+    }
+    $('#fullpage').fullpage({
+      anchors:['main', 'about', 'cities'],
+      scrollOverflow: scrollOverflow,
+      navigation: true,
+      responsive: 768,
+      navigationPosition: 'right',
+      navigationTooltips: ['Main', 'About', 'Cities'],
+      afterLoad: function(anchorLink, index){
+        const loadedSection = $(this);
+        if(index == 1){
+          $('.mark').addClass('animated bounceInDown');
+          $('.right').find('h1').addClass('animated fadeInRight');
+          $('.right').find('h3').addClass('animated fadeInRight');
+          $('.right').find('ul').find('li').addClass('animated fadeInRight');
+        }
+      },
+      onLeave: function(index, nextIndex, direction){
+        const loadedSection = $(this);
+        if (index == 1 && direction == 'down') {
+          $('.leftText').find('h1').addClass('animated fadeInDown');
+          $('.leftText').find('hr').addClass('animated fadeIn');
+          $('.leftText').find('p').addClass('animated fadeInDown');
+          $('.leftText').find('nav').find('a').addClass('animated fadeIn');
+        }
+        if (index == 2 && direction == 'down') {
+          $('.img-h3').find('h3').addClass('animated fadeInDown');
+        }
+      }
+    });
+
+$('.mouseScroll').click(function(e){
+  e.preventDefault();
+  $.fn.fullpage.moveSectionDown();
+});
+$('.cl-effect-10').find('a').click(function(e){
+  e.preventDefault();
+  $.fn.fullpage.moveSectionDown();
+});
+});
+</script>
+</body>
+</html>

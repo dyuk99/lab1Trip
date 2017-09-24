@@ -1,0 +1,94 @@
+nav {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: right;
+	padding-right: 25px;
+	a {
+		position: relative;
+		display: inline-block;
+		margin: 15px 25px;
+		outline: none;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 400;
+		text-shadow: 0 0 1px rgba(255,255,255,0.3);
+		font-size: 1.15em;
+		animation-delay:1s;
+	}
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+.cl-effect-10  {
+	position: relative;
+	z-index: 1;
+	a {
+		overflow: hidden;
+		margin: 0 15px;
+		span {
+			border:2px solid white;
+			display: block;
+			padding: 10px 20px;
+			background: transparent;
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+		}
+	}
+	a:hover {
+		text-decoration: none;
+		color: white;
+	}
+	a::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		padding: 10px 20px;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		color: black;
+		content: attr(data-hover);
+		-webkit-transition: -webkit-transform 0.3s;
+		-moz-transition: -moz-transform 0.3s;
+		transition: transform 0.3s;
+		-webkit-transform: translateX(-100%);
+	}
+	a:hover span, a:focus span {
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	a:hover::before, a:focus::before {
+		-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+}
+
+nav.black {
+	text-align: left;
+	a {
+		color: black;
+	}
+}
+
+.cl-effect-10.black  {
+	a {
+		margin-left: 0;
+		span {
+			border:2px solid black;
+		}
+	}
+	a::before {
+		background: black;
+		color: #fff;
+	}
+}
+
+
