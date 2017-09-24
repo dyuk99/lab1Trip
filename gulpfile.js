@@ -56,7 +56,8 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
 
     var buildCss = gulp.src([ // Переносим CSS стили в продакшен
         'app/css/main.css',
-        'app/css/libs.min.css'
+        'app/css/libs.min.css',
+        'app/css/other.css'
         ])
     .pipe(gulp.dest('build/css'))
 
@@ -69,8 +70,11 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('build'));
 
-    var buildHtml = gulp.src('app/cities/*.html') // Переносим HTML в продакшен
+    var buildHtml2 = gulp.src('app/cities/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('build/cities'));
+
+    var buildHtml2 = gulp.src('app/img/*.+(jpg|png)') // Переносим HTML в продакшен
+    .pipe(gulp.dest('build/img'));
 
 });
 
