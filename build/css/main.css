@@ -89,7 +89,6 @@ body {
   background-attachment: fixed; }
 
 .section .map-div {
-  height: 100vh;
   -webkit-background-size: cover;
           background-size: cover;
   background-image: url(../img/england.png);
@@ -97,7 +96,7 @@ body {
           background-size: 100% 100%; }
   .section .map-div .map {
     position: absolute;
-    top: 20%; }
+    top: 10%; }
   .section .map-div .mark {
     position: relative;
     background-color: transparent;
@@ -109,30 +108,31 @@ body {
   .section .map-div {
     display: none; } }
 
-.section .right {
-  vertical-align: middle; }
+.section .right h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: white;
+  font-size: 5em; }
+
+.section .right h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: white;
+  font-size: 1.5em;
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s; }
+
+@media all and (max-width: 992px) {
   .section .right h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    color: white;
-    font-size: 5em; }
+    font-size: 3em; }
   .section .right h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-    color: white;
-    font-size: 1.5em;
-    -webkit-animation-delay: .25s;
-            animation-delay: .25s; }
-  @media all and (max-width: 992px) {
-    .section .right h1 {
-      font-size: 3em; }
-    .section .right h3 {
-      font-size: 1.2em; } }
-  @media all and (max-width: 768px) {
-    .section .right h1 {
-      font-size: 2.5em; }
-    .section .right h3 {
-      font-size: 1em; } }
+    font-size: 1.2em; } }
+
+@media all and (max-width: 768px) {
+  .section .right h1 {
+    font-size: 2.5em; }
+  .section .right h3 {
+    font-size: 1em; } }
 
 .section ul {
   margin: 50px 0 0 0;
@@ -148,7 +148,7 @@ body {
     .section ul li p {
       color: white;
       font-family: 'Merriweather', serif;
-      font-weight: 300;
+      font-weight: 400;
       padding-top: 15px; }
   .section ul li:nth-child(1) {
     -webkit-animation-delay: 0.5s;
@@ -196,47 +196,52 @@ body {
     font-weight: 300;
     margin-top: 5px; }
 
-@media screen and (max-width: 768px) {
-  .section .mouseScroll {
-    display: none; } }
-
 .section .mouseScroll:hover {
   opacity: 1; }
   .section .mouseScroll:hover .mouse {
     padding-top: 21px; }
 
-.section-two .col-md-12 {
-  padding: 0 100px; }
-  .section-two .col-md-12 .leftText {
-    background-color: white;
-    padding: 20px; }
-    .section-two .col-md-12 .leftText h1 {
-      text-align: center;
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      -webkit-animation-delay: .5s;
-              animation-delay: .5s; }
-    .section-two .col-md-12 .leftText hr {
-      background-color: black;
-      width: 100px;
-      -webkit-animation-delay: .75s;
-              animation-delay: .75s; }
-    .section-two .col-md-12 .leftText p {
-      text-align: justify;
-      font-family: 'Merriweather', serif;
-      font-weight: 300;
-      -webkit-animation-delay: 1s;
-              animation-delay: 1s; }
-    .section-two .col-md-12 .leftText nav a {
-      -webkit-animation-delay: 1.25s;
-              animation-delay: 1.25s; }
-  .section-two .col-md-12 .rightImg {
-    height: auto;
-    padding: 0;
-    background-image: url(../img/kyivSmall.jpg);
-    -webkit-background-size: cover;
-            background-size: cover;
-    min-height: 300px; }
+.section .mouseScrollUp {
+  bottom: 0; }
+  .section .mouseScrollUp .mouse {
+    padding-top: 21px; }
+  .section .mouseScrollUp:hover .mouse {
+    padding-top: 5px; }
+
+@media screen and (max-width: 768px) {
+  .section .mouseScroll {
+    display: none; } }
+
+.section-two .leftText {
+  background-color: white;
+  padding: 20px; }
+  .section-two .leftText h1 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s; }
+  .section-two .leftText hr {
+    background-color: black;
+    width: 100px;
+    -webkit-animation-delay: .75s;
+            animation-delay: .75s; }
+  .section-two .leftText p {
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .section-two .leftText nav a {
+    -webkit-animation-delay: 1.25s;
+            animation-delay: 1.25s; }
+
+.section-two .rightImg {
+  padding: 0;
+  background-image: url(../img/kyivSmall.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  min-height: 300px; }
 
 @media screen and (max-width: 768px) {
   .section-two .col-md-12 {
@@ -249,64 +254,83 @@ body {
 
 .section-third hr {
   background-color: white;
-  width: 100px;
-  margin-bottom: 80px; }
+  width: 100px; }
 
-.section-third .col-md-12 {
-  padding: 0 100px 80px 100px;
-  text-align: center; }
-  .section-third .col-md-12 .col-md-4:first-child {
-    padding-right: 15px;
-    padding-left: 12px; }
-  .section-third .col-md-12 .col-md-4:last-child {
-    padding-left: 15px;
-    padding-right: 12px; }
-  .section-third .col-md-12 .col-md-4 .img {
-    display: block;
-    height: 200px;
+.section-third .col-md-4:first-child {
+  padding-right: 15px;
+  padding-left: 12px; }
+
+.section-third .col-md-4:last-child {
+  padding-left: 15px;
+  padding-right: 12px; }
+
+.section-third .col-md-4 .img {
+  display: block;
+  height: 200px;
+  outline: 2px solid white;
+  outline-offset: -10px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: outline-offset .2s;
+  -o-transition: outline-offset .2s;
+  transition: outline-offset .2s;
+  text-align: center;
+  padding-top: 70px;
+  text-decoration: none; }
+  .section-third .col-md-4 .img:hover {
+    outline-offset: 10px; }
+    .section-third .col-md-4 .img:hover:before {
+      opacity: 0.4; }
+  .section-third .col-md-4 .img:before {
+    content: ' ';
+    background-image: url(../img/harkiv.jpg);
     -webkit-background-size: cover;
             background-size: cover;
-    outline: 2px solid white;
-    outline-offset: -10px;
-    position: relative;
-    cursor: pointer;
-    -webkit-transition: outline-offset .2s;
-    -o-transition: outline-offset .2s;
-    transition: outline-offset .2s;
-    text-align: center;
-    padding-top: 70px;
-    text-decoration: none; }
-    .section-third .col-md-12 .col-md-4 .img:hover {
-      outline-offset: 10px; }
-      .section-third .col-md-12 .col-md-4 .img:hover:before {
-        opacity: 0.4; }
-    .section-third .col-md-12 .col-md-4 .img:before {
-      content: ' ';
-      background-image: url(../img/harkiv.jpg);
-      opacity: 1;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-position: center center;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-      -webkit-transition: opacity .2s;
-      -o-transition: opacity .2s;
-      transition: opacity .2s; }
-    .section-third .col-md-12 .col-md-4 .img h3 {
-      color: white;
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      -webkit-animation-delay: .25s;
-              animation-delay: .25s; }
-      .section-third .col-md-12 .col-md-4 .img h3:hover {
-        color: white; }
-  .section-third .col-md-12 .col-md-4:nth-child(2) .img:before {
-    background-image: url(../img/rivne.jpg); }
-  .section-third .col-md-12 .col-md-4:last-child .img:before {
-    background-image: url(../img/donetsk.jpg); }
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .section-third .col-md-4 .img h3 {
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    -webkit-animation-delay: .25s;
+            animation-delay: .25s; }
+    .section-third .col-md-4 .img h3:hover {
+      color: white; }
+
+.section-third .col-md-4:nth-child(2) .img:before {
+  background-image: url(../img/rivne.jpg); }
+
+.section-third .col-md-4:last-child .img:before {
+  background-image: url(../img/donetsk.jpg); }
+
+@media screen and (max-width: 575px) {
+  .section-third .col-md-4 {
+    margin-bottom: 25px; }
+    .section-third .col-md-4:first-child, .section-third .col-md-4:last-child {
+      padding-left: 15px;
+      padding-right: 15px; }
+    .section-third .col-md-4:last-child {
+      margin-bottom: 0; } }
+
+.section-third .sec-row {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  .section-third .sec-row .col-md-4 .img:before {
+    background-image: url(../img/odessa.jpg); }
+  .section-third .sec-row .col-md-4:nth-child(2) .img:before {
+    background-image: url(../img/sevastopol.jpg); }
+  .section-third .sec-row .col-md-4:last-child .img:before {
+    background-image: url(../img/lviv.jpg); }
 
 #fp-nav.right a {
   height: 17px;

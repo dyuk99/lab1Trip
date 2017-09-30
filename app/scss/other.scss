@@ -6,14 +6,9 @@ body {
 	background-attachment: fixed;
 }
 .container-fluid {
-	display: table-cell;
-	vertical-align: middle;
-	height: 100vh;
-	box-sizing:border-box;
-	padding: 0 100px;
-	.col-md-12 {
-		text-align: center;
-		padding: 0 100px;
+		display: table-cell;
+		vertical-align: middle;
+		height: 100vh;
 		.col-md-4 {
 			padding: 0;
 			background-color: #fff;
@@ -25,6 +20,15 @@ body {
 			}
 			&.donetsk {
 				background-image: url(../img/donetsk.jpg);
+			}
+			&.odessa {
+				background-image: url(../img/odessa.jpg);
+			}
+			&.sevastopol {
+				background-image: url(../img/sevastopol.jpg);
+			}
+			&.lviv {
+				background-image: url(../img/lviv.jpg);
 			}
 		}
 		.col-md-8 {
@@ -52,31 +56,14 @@ body {
 			}
 			.info-page {
 				position: absolute;
+				bottom:0;
 				right: 0;
-				bottom: 0;
 			}
 		}
-	}
 }
 @media screen and (max-width: 992px) {
-	.container-fluid {
-		padding: 0;
-		.col-md-12 {
-			padding: 0;
 			.info-page {
-
-				margin: 100px 0;
-				a {
-					position: absolute;
-					right: 0;
-					bottom: 0;
-				}
+				position: static !important;
+				margin: 50px 0;
 			}
-		} 
-	}
-}
-@media screen and (max-width: 789px) {
-	.container-fluid {
-		display: block;
-	}
 }

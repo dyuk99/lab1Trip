@@ -45,4 +45,8 @@ $('.cl-effect-10').find('a').click(function(e){
   e.preventDefault();
   $.fn.fullpage.moveSectionDown();
 });
+$('.mouseScrollUp').click(function(e){
+  e.preventDefault();
+  $.fn.fullpage.moveSectionUp();
+});
 });

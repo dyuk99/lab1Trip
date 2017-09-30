@@ -91,64 +91,53 @@ body {
 .container-fluid {
   display: table-cell;
   vertical-align: middle;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 100px; }
-  .container-fluid .col-md-12 {
+  height: 100vh; }
+  .container-fluid .col-md-4 {
+    padding: 0;
+    background-color: #fff;
+    background-image: url(../img/harkiv.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    min-height: 400px; }
+    .container-fluid .col-md-4.rivne {
+      background-image: url(../img/rivne.jpg); }
+    .container-fluid .col-md-4.donetsk {
+      background-image: url(../img/donetsk.jpg); }
+    .container-fluid .col-md-4.odessa {
+      background-image: url(../img/odessa.jpg); }
+    .container-fluid .col-md-4.sevastopol {
+      background-image: url(../img/sevastopol.jpg); }
+    .container-fluid .col-md-4.lviv {
+      background-image: url(../img/lviv.jpg); }
+  .container-fluid .col-md-8 {
+    background-color: #fff;
     text-align: center;
-    padding: 0 100px; }
-    .container-fluid .col-md-12 .col-md-4 {
-      padding: 0;
-      background-color: #fff;
-      background-image: url(../img/harkiv.jpg);
-      -webkit-background-size: cover;
-              background-size: cover;
-      min-height: 400px; }
-      .container-fluid .col-md-12 .col-md-4.rivne {
-        background-image: url(../img/rivne.jpg); }
-      .container-fluid .col-md-12 .col-md-4.donetsk {
-        background-image: url(../img/donetsk.jpg); }
-    .container-fluid .col-md-12 .col-md-8 {
-      background-color: #fff;
-      text-align: center;
-      position: relative;
-      padding-top: 25px; }
-      .container-fluid .col-md-12 .col-md-8 h1 {
-        font-family: 'Merriweather', serif;
-        font-weight: 700;
-        -webkit-animation-delay: .25s;
-                animation-delay: .25s; }
-      .container-fluid .col-md-12 .col-md-8 hr {
-        background-color: black;
-        width: 100px;
-        -webkit-animation-delay: .5s;
-                animation-delay: .5s; }
-      .container-fluid .col-md-12 .col-md-8 p {
-        font-family: 'Merriweather', serif;
-        font-weight: 300;
-        -webkit-animation-delay: .75s;
-                animation-delay: .75s; }
-      .container-fluid .col-md-12 .col-md-8 a {
-        -webkit-animation-delay: 1.25s;
-                animation-delay: 1.25s; }
-      .container-fluid .col-md-12 .col-md-8 .info-page {
-        position: absolute;
-        right: 0;
-        bottom: 0; }
+    position: relative;
+    padding-top: 25px; }
+    .container-fluid .col-md-8 h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      -webkit-animation-delay: .25s;
+              animation-delay: .25s; }
+    .container-fluid .col-md-8 hr {
+      background-color: black;
+      width: 100px;
+      -webkit-animation-delay: .5s;
+              animation-delay: .5s; }
+    .container-fluid .col-md-8 p {
+      font-family: 'Merriweather', serif;
+      font-weight: 300;
+      -webkit-animation-delay: .75s;
+              animation-delay: .75s; }
+    .container-fluid .col-md-8 a {
+      -webkit-animation-delay: 1.25s;
+              animation-delay: 1.25s; }
+    .container-fluid .col-md-8 .info-page {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
 
 @media screen and (max-width: 992px) {
-  .container-fluid {
-    padding: 0; }
-    .container-fluid .col-md-12 {
-      padding: 0; }
-      .container-fluid .col-md-12 .info-page {
-        margin: 100px 0; }
-        .container-fluid .col-md-12 .info-page a {
-          position: absolute;
-          right: 0;
-          bottom: 0; } }
-
-@media screen and (max-width: 789px) {
-  .container-fluid {
-    display: block; } }
+  .info-page {
+    position: static !important;
+    margin: 50px 0; } }

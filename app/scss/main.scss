@@ -7,13 +7,12 @@ body {
 }
 .section {
 	.map-div {
-		height: 100vh;
 		background-size: cover;
 		background-image: url(../img/england.png);
 		background-size: 100% 100%;
 		.map {
 			position: absolute;
-			top:20%;
+			top:10%;
 		}
 		.mark {
 			position: relative;
@@ -24,12 +23,11 @@ body {
 		}
 	}
 	@media screen and (max-width: 768px) {
-	    	.map-div {
-	    		display: none;
-	    	}
+		.map-div {
+			display: none;
 		}
+	}
 	.right {
-		vertical-align: middle;
 		h1 {
 			font-family: 'Merriweather', serif;
 			font-weight: 700;
@@ -44,20 +42,20 @@ body {
 			animation-delay: .25s;
 		}
 		@media all and (max-width: 992px) {
-	    	h1{
-	        	font-size: 3em;
-	    	}
-	    	h3 {
-	    		font-size: 1.2em;
-	    	}
+			h1{
+				font-size: 3em;
+			}
+			h3 {
+				font-size: 1.2em;
+			}
 		}
 		@media all and (max-width: 768px) {
-	    	h1{
-	        	font-size: 2.5em;
-	    	}
-	    	h3 {
-	    		font-size: 1em;
-	    	}
+			h1{
+				font-size: 2.5em;
+			}
+			h3 {
+				font-size: 1em;
+			}
 		}
 	}
 	ul {
@@ -75,14 +73,14 @@ body {
 			p {
 				color: white;
 				font-family: 'Merriweather', serif;
-				font-weight: 300;
+				font-weight: 400;
 				padding-top: 15px;
 			}
 		}
 		@for $i from 1 through 3 {
-		  li:nth-child(#{$i}) {
-		  	animation-delay: .25s+($i*0.25);
-		  }
+			li:nth-child(#{$i}) {
+				animation-delay: .25s+($i*0.25);
+			}
 		}
 	}
 	.mouseScroll {
@@ -118,52 +116,60 @@ body {
 			margin-top: 5px;
 		}
 	}
-	@media screen and (max-width: 768px) {
-		.mouseScroll {
-			display: none;
-		} 
-	}
 	.mouseScroll:hover {
 		opacity: 1;
 		.mouse {
 			padding-top: 21px;
 		}
 	}
+	.mouseScrollUp {
+		bottom: 0;
+		.mouse {
+			padding-top: 21px;
+		}
+		&:hover {
+			.mouse {
+				padding-top: 5px;
+			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.mouseScroll {
+			display: none;
+		} 
+	}
 }
 .section-two {
-	.col-md-12 {
-		padding: 0 100px;
-		.leftText {
-			background-color:white;
-			padding: 20px;
-			h1 {
-				text-align: center;
-				font-family: 'Merriweather', serif;
-				font-weight: 700;
-				animation-delay: .5s;
-			}
-			hr {
-				background-color: black;
-				width:100px;
-				animation-delay: .75s;
-			}
-			p {
-				text-align: justify;
-				font-family: 'Merriweather', serif;
-				font-weight: 300;
-				animation-delay: 1s;
-			}
-			nav a{
-				animation-delay: 1.25s;
-			}
+	.leftText {
+		background-color:white;
+		padding: 20px;
+		h1 {
+			text-align: center;
+			font-family: 'Merriweather', serif;
+			font-weight: 700;
+			animation-delay: .5s;
 		}
-		.rightImg {
-			height: auto;
-			padding: 0;
-			background-image: url(../img/kyivSmall.jpg);
-			background-size: cover;
-			min-height: 300px;
+		hr {
+			background-color: black;
+			width:100px;
+			animation-delay: .75s;
 		}
+		p {
+			text-align: justify;
+			font-family: 'Merriweather', serif;
+			font-weight: 300;
+			animation-delay: 1s;
+		}
+		nav a{
+			animation-delay: 1.25s;
+		}
+	}
+	.rightImg {
+
+		padding: 0;
+		background-image: url(../img/kyivSmall.jpg);
+		background-size: cover;
+		min-height: 300px;
 	}
 	@media screen and (max-width: 768px) {
 		.col-md-12 {
@@ -180,78 +186,112 @@ body {
 	hr {
 		background-color: white;
 		width:100px;
-		margin-bottom: 80px;
+		
 	}
-	.col-md-12 {
-		padding: 0 100px 80px 100px;
-		text-align: center;
-			.col-md-4 {
-				&:first-child {
-					padding-right:15px;
-					padding-left: 12px;
-				}
-				&:last-child{
-					padding-left: 15px;
-					padding-right: 12px;
-				}
-				.img {
-					display: block;
-					height:200px;
-					background-size: cover;
-					outline: 2px solid white;
-					outline-offset:-10px;
-					position: relative;
-					cursor: pointer;
-					transition: outline-offset .2s;
-					text-align: center;
-					padding-top: 70px;
-					text-decoration: none;
-					&:hover {
-						outline-offset:10px;
-						&:before {
-							opacity:0.4;
-						}
-					}
-					&:before {
-						content: ' ';
-						background-image: url(../img/harkiv.jpg);
-						opacity: 1;
-						display: block;
-						position: absolute;
-						top:0;
-						left: 0;
-						background-position: center center;
-						bottom: 0;
-						right: 0;
-						z-index: -1;
-						transition:opacity .2s;
-					}
-					h3 {
-						color: white;
-						font-family: 'Merriweather', serif;
-						font-weight: 700;
-						animation-delay: .25s;
-						&:hover {
-							color:white;
-						}
-					}
-				}
-				&:nth-child(2) {
-					.img {
-						&:before {
-							background-image: url(../img/rivne.jpg);
-						}
-					}
-				}
-				&:last-child {
-					.img {
-						&:before {
-							background-image: url(../img/donetsk.jpg);
-						}
-					}
+	.col-md-4 {
+		&:first-child {
+			padding-right:15px;
+			padding-left: 12px;
+		}
+		&:last-child{
+			padding-left: 15px;
+			padding-right: 12px;
+		}
+		.img {
+			display: block;
+			height:200px;
+			outline: 2px solid white;
+			outline-offset:-10px;
+			position: relative;
+			cursor: pointer;
+			transition: outline-offset .2s;
+			text-align: center;
+			padding-top: 70px;
+			text-decoration: none;
+			&:hover {
+				outline-offset:10px;
+				&:before {
+					opacity:0.4;
 				}
 			}
-	}   
+			&:before {
+				content: ' ';
+				background-image: url(../img/harkiv.jpg);
+				background-size: cover;
+				opacity: 1;
+				display: block;
+				position: absolute;
+				top:0;
+				left: 0;
+				background-position: center center;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				transition:opacity .2s;
+			}
+			h3 {
+				color: white;
+				font-family: 'Merriweather', serif;
+				font-weight: 700;
+				animation-delay: .25s;
+				&:hover {
+					color:white;
+				}
+			}
+		}
+		&:nth-child(2) {
+			.img {
+				&:before {
+					background-image: url(../img/rivne.jpg);
+				}
+			}
+		}
+		&:last-child {
+			.img {
+				&:before {
+					background-image: url(../img/donetsk.jpg);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 575px) {
+			.col-md-4 {
+				margin-bottom: 25px;
+				&:first-child, &:last-child {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			} 
+		}
+	.sec-row {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		.col-md-4 {
+			.img {
+				&:before {
+					background-image: url(../img/odessa.jpg);
+				}
+			}
+			&:nth-child(2) {
+			.img {
+				&:before {
+					background-image: url(../img/sevastopol.jpg);
+				}
+			}
+		}
+		&:last-child {
+			.img {
+				&:before {
+					background-image: url(../img/lviv.jpg);
+				}
+			}
+		}
+		}
+	}
+
 }
 #fp-nav.right {
 	a {
