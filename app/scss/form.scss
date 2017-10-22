@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400,700");
+@import "button";
+body {
+  background-size: cover;
+  background-image: url(../img/kyiv1.jpg);
+  background-attachment: fixed;
+}
+
+.wizard-progress-with-circle {
+	background-color:#f3f2ee !important;
+	width: 100% !important;
+}
+
+.wizard-icon-circle.md.checked {
+	outline: none;
+}
+
+.justify-content-center {
+  display: flex;
+  min-height: 100vh;
+  .col-md-10 {
+  	margin: auto;
+  	.form-div {
+  		background-color: white;
+  		hr {
+			border-color: black;
+			width:100px;
+		}
+  	}
+  }
+}
+
+.uploadedImg {
+	display: none;
+}
+.uploadedImg_active {
+	display: block;
+	width: 200px;
+	height:200px;
+	margin-bottom: 10px;
+}
+
+input[type=file] {
+	height: 40px !important;
+}
+

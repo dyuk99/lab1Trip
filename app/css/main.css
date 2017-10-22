@@ -256,62 +256,80 @@ body {
   background-color: white;
   width: 100px; }
 
-.section-third .col-md-4:first-child {
-  padding-right: 15px;
-  padding-left: 12px; }
-
-.section-third .col-md-4:last-child {
-  padding-left: 15px;
-  padding-right: 12px; }
-
-.section-third .col-md-4 .img {
-  display: block;
-  height: 200px;
-  outline: 2px solid white;
-  outline-offset: -10px;
-  position: relative;
-  cursor: pointer;
-  -webkit-transition: outline-offset .2s;
-  -o-transition: outline-offset .2s;
-  transition: outline-offset .2s;
-  text-align: center;
-  padding-top: 70px;
-  text-decoration: none; }
-  .section-third .col-md-4 .img:hover {
-    outline-offset: 10px; }
-    .section-third .col-md-4 .img:hover:before {
-      opacity: 0.4; }
-  .section-third .col-md-4 .img:before {
-    content: ' ';
-    background-image: url(../img/harkiv.jpg);
-    -webkit-background-size: cover;
-            background-size: cover;
-    opacity: 1;
+.section-third .col-md-4 {
+  margin-bottom: 25px; }
+  .section-third .col-md-4:first-child, .section-third .col-md-4:nth-child(4) {
+    padding-right: 15px;
+    padding-left: 12px; }
+  .section-third .col-md-4:last-child, .section-third .col-md-4:nth-child(3) {
+    padding-left: 15px;
+    padding-right: 12px; }
+  .section-third .col-md-4 .img {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-position: center center;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    -webkit-transition: opacity .2s;
-    -o-transition: opacity .2s;
-    transition: opacity .2s; }
-  .section-third .col-md-4 .img h3 {
-    color: white;
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    -webkit-animation-delay: .25s;
-            animation-delay: .25s; }
-    .section-third .col-md-4 .img h3:hover {
-      color: white; }
-
-.section-third .col-md-4:nth-child(2) .img:before {
-  background-image: url(../img/rivne.jpg); }
-
-.section-third .col-md-4:last-child .img:before {
-  background-image: url(../img/donetsk.jpg); }
+    height: 200px;
+    outline: 2px solid white;
+    outline-offset: -10px;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: outline-offset .2s;
+    -o-transition: outline-offset .2s;
+    transition: outline-offset .2s;
+    text-align: center;
+    padding-top: 70px;
+    text-decoration: none; }
+    .section-third .col-md-4 .img:hover {
+      outline-offset: 10px; }
+      .section-third .col-md-4 .img:hover:before {
+        opacity: 0.4; }
+    .section-third .col-md-4 .img:before {
+      content: ' ';
+      background-image: url(../img/harkiv.jpg);
+      -webkit-background-size: cover;
+              background-size: cover;
+      opacity: 1;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: center center;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      -webkit-transition: opacity .2s;
+      -o-transition: opacity .2s;
+      transition: opacity .2s; }
+    .section-third .col-md-4 .img h3 {
+      color: white;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      -webkit-animation-delay: .25s;
+              animation-delay: .25s; }
+      .section-third .col-md-4 .img h3:hover {
+        color: white; }
+    .section-third .col-md-4 .img ul {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      -webkit-animation-delay: .25s;
+              animation-delay: .25s; }
+      .section-third .col-md-4 .img ul li {
+        list-style-type: none;
+        color: white;
+        display: inline-block;
+        font-family: Arial;
+        font-weight: 300; }
+  .section-third .col-md-4 .rivne:before {
+    background-image: url(../img/rivne.jpg); }
+  .section-third .col-md-4 .donetsk:before {
+    background-image: url(../img/donetsk.jpg); }
+  .section-third .col-md-4 .odessa:before {
+    background-image: url(../img/odessa.jpg); }
+  .section-third .col-md-4 .sevastopol:before {
+    background-image: url(../img/sevastopol.jpg); }
+  .section-third .col-md-4 .lviv:before {
+    background-image: url(../img/lviv.jpg); }
 
 @media screen and (max-width: 575px) {
   .section-third .col-md-4 {
@@ -321,16 +339,6 @@ body {
       padding-right: 15px; }
     .section-third .col-md-4:last-child {
       margin-bottom: 0; } }
-
-.section-third .sec-row {
-  margin-top: 25px;
-  margin-bottom: 25px; }
-  .section-third .sec-row .col-md-4 .img:before {
-    background-image: url(../img/odessa.jpg); }
-  .section-third .sec-row .col-md-4:nth-child(2) .img:before {
-    background-image: url(../img/sevastopol.jpg); }
-  .section-third .sec-row .col-md-4:last-child .img:before {
-    background-image: url(../img/lviv.jpg); }
 
 #fp-nav.right a {
   height: 17px;
